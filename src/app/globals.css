@@ -53,6 +53,7 @@
 *::-webkit-scrollbar {
   display: none !important;
 }
+
 .bg-radial-gradient {
   background-image: radial-gradient(
     circle at 10% 20%,
@@ -63,25 +64,25 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
+    --background: hsl(0, 0%, 100%);
+    --foreground: hsl(0, 0%, 3.9%);
+    --card: hsl(0, 0%, 100%);
+    --card-foreground: hsl(0, 0%, 3.9%);
+    --popover: hsl(0, 0%, 100%);
+    --popover-foreground: hsl(0, 0%, 3.9%);
+    --primary: hsl(0, 0%, 9%);
+    --primary-foreground: hsl(0, 0%, 98%);
+    --secondary: hsl(0, 0%, 96.1%);
+    --secondary-foreground: hsl(0, 0%, 9%);
+    --muted: hsl(0, 0%, 96.1%);
+    --muted-foreground: hsl(0, 0%, 45.1%);
+    --accent: hsl(0, 0%, 96.1%);
+    --accent-foreground: hsl(0, 0%, 9%);
+    --destructive: hsl(0, 84.2%, 60.2%);
+    --destructive-foreground: hsl(0, 0%, 98%);
+    --border: hsl(0, 0%, 89.8%);
+    --input: hsl(0, 0%, 89.8%);
+    --ring: hsl(0, 0%, 3.9%);
     --radius: 0.5rem;
     --menu-bg-light: white;
     --menu-bg-dark: #1a1a1a;
@@ -92,25 +93,25 @@
   }
 
   .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
+    --background: hsl(0, 0%, 3.9%);
+    --foreground: hsl(0, 0%, 98%);
+    --card: hsl(0, 0%, 3.9%);
+    --card-foreground: hsl(0, 0%, 98%);
+    --popover: hsl(0, 0%, 3.9%);
+    --popover-foreground: hsl(0, 0%, 98%);
+    --primary: hsl(0, 0%, 98%);
+    --primary-foreground: hsl(0, 0%, 9%);
+    --secondary: hsl(0, 0%, 14.9%);
+    --secondary-foreground: hsl(0, 0%, 98%);
+    --muted: hsl(0, 0%, 14.9%);
+    --muted-foreground: hsl(0, 0%, 63.9%);
+    --accent: hsl(0, 0%, 14.9%);
+    --accent-foreground: hsl(0, 0%, 98%);
+    --destructive: hsl(0, 62.8%, 30.6%);
+    --destructive-foreground: hsl(0, 0%, 98%);
+    --border: hsl(0 0% 14.9%);
+    --input: hsl(0, 0%, 14.9%);
+    --ring: hsl(0, 0%, 83.1%);
   }
 }
 
@@ -147,4 +148,156 @@
 
 .animate-scroll-right {
   animation: scroll-right var(--animation-duration, 40s) linear infinite;
+}
+
+.cl-formButtonPrimary[data-variant="solid"][data-color="primary"] {
+  box-shadow: none !important;
+}
+
+.cl-internal-jgxnlu {
+  box-sizing: border-box;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  margin: 0px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: inherit;
+  letter-spacing: normal;
+  font-weight: 500;
+  font-size: 0.8125rem;
+  line-height: 1.38462;
+  color: #a365f3;
+}
+
+/* animations.css */
+
+/* Animation Scroll */
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+/* Animation Spotlight */
+@keyframes spotlight {
+  0% {
+    opacity: 0;
+    transform: translate(-72%, -62%) scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -40%) scale(1);
+  }
+}
+
+/* Animation Move Horizontal */
+@keyframes moveHorizontal {
+  0% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+  50% {
+    transform: translateX(50%) translateY(10%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+}
+
+/* Animation Move in Circle */
+@keyframes moveInCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animation Move Vertical */
+@keyframes moveVertical {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+/* Accordion Animation Down */
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+/* Accordion Animation Up */
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+/* Animation Usage */
+
+/* Scroll Animation */
+.animate-scroll {
+  animation: scroll var(--animation-duration, 40s)
+    var(--animation-direction, forwards) linear infinite;
+}
+
+/* Spotlight Animation */
+.animate-spotlight {
+  animation: spotlight 2s ease 0.75s 1 forwards;
+}
+
+/* Accordion Down */
+.animate-accordion-down {
+  animation: accordion-down 0.2s ease-out;
+}
+
+/* Accordion Up */
+.animate-accordion-up {
+  animation: accordion-up 0.2s ease-out;
+}
+
+/* Move Vertical */
+.animate-first {
+  animation: moveVertical 30s ease infinite;
+}
+
+/* Move in Circle */
+.animate-second {
+  animation: moveInCircle 20s reverse infinite;
+}
+
+.animate-third {
+  animation: moveInCircle 40s linear infinite;
+}
+
+/* Move Horizontal */
+.animate-fourth {
+  animation: moveHorizontal 40s ease infinite;
+}
+
+/* Move in Circle Again */
+.animate-fifth {
+  animation: moveInCircle 20s ease infinite;
+}
+
+.react-flow__controls button {
+  background-color: withe !important;
+  color: black !important;
 }

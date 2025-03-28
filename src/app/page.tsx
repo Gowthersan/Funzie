@@ -39,7 +39,7 @@ export default function Home() {
         className="md:mt-[18rem] mt-[-100px]"
         items={clients}
         direction="right"
-        speed="normal"
+        speed="slow"
       />
 
       <section>
